@@ -24,7 +24,8 @@ include "header.php";
                 groups.id,
                 groups.name,
                 groups.department,
-                groups.year
+                groups.year,
+                COUNT(students.id) AS total_students
             FROM groups
             LEFT JOIN students ON students.group_id = groups.id
             GROUP BY groups.id
@@ -38,6 +39,7 @@ include "header.php";
                 echo "<td>" . $group["name"] . "</td>";
                 echo "<td>" . $group["department"] . "</td>";
                 echo "<td>" . $group["year"] . "</td>";
+                echo "<td>" . $group["total_students"] . "</td>";
                 echo '<td><a href="group-delete.php?id=' . $group["id"] . '">❌</a></td>';
                 echo "</tr>";
             }
