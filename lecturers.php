@@ -21,7 +21,6 @@ include "header.php";
 
         <?php
             $sql = "
-
             SELECT
                 lecturers.id,
                 lecturers.fullname,
@@ -29,7 +28,6 @@ include "header.php";
                 lecturers.degree
             FROM lecturers
             ORDER BY lecturers.id
-
             ";
             $result = mysqli_query($link, $sql);
 
