@@ -13,3 +13,12 @@ $link = mysqli_connect($hostname, $username, $password);
 if (!$link) {
     die("Connection failed: " . mysqli_connect_error());
 }
+
+// Create database
+$sql = "CREATE DATABASE " . $database;
+
+if (mysqli_query($link, $sql)) {
+    echo "Database " . $database . " created successfully<br>";
+} else {
+    echo "Error creating database: " . mysqli_error($link);
+}
