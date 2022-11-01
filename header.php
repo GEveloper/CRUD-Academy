@@ -9,6 +9,9 @@ include "connection.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>University Application</title>
     <style>
+        .active {
+            background: red;
+        }
         body {
             margin: 0;
         }
@@ -47,6 +50,22 @@ include "connection.php";
         table th {
             padding: 20px;
             background: #fbc438;
+        }
+        form {
+            padding: 50px;
+        }
+        form input {
+            padding: 5px;
+            margin: 10px 0;
+        }
+        form select {
+            padding: 5px;
+            margin: 10px 0;
+        }
+        form input[type="submit"] {
+            background: blue;
+            padding: 20px;
+            color: white;
         }
     </style>
 </head>
