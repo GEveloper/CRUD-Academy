@@ -1,5 +1,15 @@
 <?php
 include "connection.php";
+
+if ($_POST) {
+    $sql = "
+    INSERT INTO lecturers (fullname, gender, degree)
+    VALUES ('" . $_POST["fullname"] . "', '" . $_POST["gender"] . "', '" . $_POST["degree"] . "');
+    ";
+    mysqli_query($link, $sql);
+    header('Location: lecturers.php');
+} else {
+    include 'header.php';
 ?>
 
 <nav>
@@ -30,4 +40,5 @@ include "connection.php";
 
 <?php
 include 'footer.php';
+}
 ?>
