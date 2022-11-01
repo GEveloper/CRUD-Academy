@@ -8,6 +8,8 @@ include "header.php";
         <a href="teaching.php">Teaching Process</a>
     </nav>
 
+    <a href="student-create.php">➕</a>
+
     <table border="1">
         <tr>
             <th>#</th>
