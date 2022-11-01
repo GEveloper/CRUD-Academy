@@ -71,5 +71,19 @@ if (mysqli_query($link, $sql)) {
     echo "Error creating table: " . mysqli_error($link);
 }
 
+// Create table teaches
+$sql = "CREATE TABLE IF NOT EXISTS `teaches` (
+    `id` int(11) NOT NULL AUTO_INCREMENT,
+    `lecturer_id` int(11) NOT NULL,
+    `group_id` int(11) NOT NULL,
+    PRIMARY KEY (`id`)
+  ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4";
+
+if (mysqli_query($link, $sql)) {
+    echo "teaches table created successfully<br>";
+} else {
+    echo "Error creating table: " . mysqli_error($link);
+}
+
 // Close connection
 mysqli_close($link);
