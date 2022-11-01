@@ -1,3 +1,7 @@
+<?php
+include "connection.php";
+?>
+
 <nav>
     <a href="students.php">Students</a>
     <a href="groups.php" class="active">Groups</a>
@@ -20,3 +24,7 @@
 
     <input type="submit" value="Create Group">
 </form>
+
+<?php
+include 'footer.php';
+?>
