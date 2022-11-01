@@ -31,6 +31,23 @@ include "connection.php";
             display: inline-block;
             text-decoration: none;
         }
+        table {
+            border: 2px solid black;
+            width: 100%;
+        }
+        table tr {
+            border: none;
+        }
+        table td {
+            padding: 20px;
+        }
+        table a {
+            text-decoration: none;
+        }
+        table th {
+            padding: 20px;
+            background: #fbc438;
+        }
     </style>
 </head>
 <body>
