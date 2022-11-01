@@ -56,5 +56,20 @@ if (mysqli_query($link, $sql)) {
     echo "Error creating table: " . mysqli_error($link);
 }
 
+// Create table groups
+$sql = "CREATE TABLE IF NOT EXISTS `groups` (
+    `id` int(11) NOT NULL AUTO_INCREMENT,
+    `name` text NOT NULL,
+    `department` text NOT NULL,
+    `year` int(11) NOT NULL,
+    PRIMARY KEY (`id`)
+  ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4";
+
+if (mysqli_query($link, $sql)) {
+    echo "groups table created successfully<br>";
+} else {
+    echo "Error creating table: " . mysqli_error($link);
+}
+
 // Close connection
 mysqli_close($link);
