@@ -22,7 +22,6 @@ include "header.php";
 
         <?php
             $sql = "
-
             SELECT
                 students.id,
                 students.studnum,
@@ -32,7 +31,6 @@ include "header.php";
             FROM students
             LEFT JOIN groups ON groups.id = students.group_id
             ORDER BY students.id
-
             ";
             $result = mysqli_query($link, $sql);
 
