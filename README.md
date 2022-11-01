@@ -1,4 +1,4 @@
-# CRUD-Academy
+# CRUD Academy
 
 This project is created for university to manage students, groups and lecturers relationships during classes.
 
