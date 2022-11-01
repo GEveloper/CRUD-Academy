@@ -1,5 +1,15 @@
 <?php
 include "connection.php";
+
+if ($_POST) {
+    $sql = "
+    INSERT INTO groups (name, department, year)
+    VALUES ('" . $_POST["name"] . "', '" . $_POST["department"] . "', '" . $_POST["year"] . "')
+    ";
+    mysqli_query($link, $sql);
+    header('Location: groups.php');
+} else {
+    include 'header.php';
 ?>
 
 <nav>
@@ -27,4 +37,5 @@ include "connection.php";
 
 <?php
 include 'footer.php';
+}
 ?>
