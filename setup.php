@@ -15,7 +15,7 @@ if (!$link) {
 }
 
 // Create database
-$sql = "CREATE DATABASE " . $database;
+$sql = "CREATE DATABASE IF NOT EXISTS " . $database;
 
 if (mysqli_query($link, $sql)) {
     echo "Database " . $database . " created successfully<br>";
