@@ -48,6 +48,22 @@ include "connection.php";
             padding: 20px;
             background: #fbc438;
         }
+        form {
+            padding: 50px;
+        }
+        form input {
+            padding: 5px;
+            margin: 10px 0;
+        }
+        form select {
+            padding: 5px;
+            margin: 10px 0;
+        }
+        form input[type="submit"] {
+            background: blue;
+            padding: 20px;
+            color: white;
+        }
     </style>
 </head>
 <body>
